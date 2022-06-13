@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+button {
+    background: none;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(24 / 18 * 100%);
+    scroll-behavior: smooth;
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    color: #00cc5c;
+}
+
+span.minus {
+    color: rgb(233, 103, 103);
+}
+
+.another-worker,
+.myself,
+.planned-clean-profit,
+.planned-clean-profit-content {
+    display: none;
+}
+
+.another-worker.active,
+.myself.active,
+.planned-clean-profit.active,
+.planned-clean-profit-content.active {
+    display: block;
+}
+
+.price,
+.percent,
+.count-of-client-another,
+.planned-costs-another,
+.count-of-client,
+.planned-costs {
+    padding: 16px 0;
+}
+
+.another-result,
+.myself-result {
+    display: none;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: calc(42 / 36 * 100%);
+    color: #fff;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: calc(32 / 26 * 100%);
+    color: #FFCC66;
+}
+
+h3 {
+    margin: 30px 0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: calc(38 / 30 * 100%);
+    color: rgb(91, 199, 91);
+}
+
+label {
+    font-size: 20px;
+    color: rgb(233, 103, 103);
+}
+
+input {
+    margin: 3px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    max-width: 150px;
+    background: #555;
+    border-radius: 5px;
+    border-bottom: 1px solid grey;
+    color: #fff;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    min-height: 42px;
+    color: #fff;
+    background: #0099CC;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: transparent;
+    outline: 1px solid #0099CC;
+}
+
+button:disabled {
+    background: #0099cc73;
+    color: gray;
+}
+
+button:hover:disabled {
+    outline: none;
+    cursor: no-drop;
+}

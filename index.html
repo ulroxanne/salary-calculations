@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Расчет доходов и затрат</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1>Расчет доходов и затрат</h1>
+            <div class="price">
+                <label for="price">Цена за услугу:</label>
+                <div class="input"><input type="number" name="price" id="price"> р.</div>
+            </div>
+            <div class="buttons">
+                <button id="anotherworker">Расчет для работника</button>
+                <button id="myself">Расчет для себя</button>
+                <button id="all">Расчет работника и себя, а так же вывод чистой прибыли с учетом всего выше</button>
+            </div>
+            <div class="another-worker">
+                <div class="count-of-client-another">
+                    <h3>Другой работник</h3>
+                    <div class="percent">
+                        <label for="percent">Процентная ставка работника:</label>
+                        <div class="input"><input type="number" name="percent" id="percent"> %</div>
+                    </div>
+                    <label for="countofclientanother">Планируемый приток клиенток в день:</label>
+                    <div class="input"> <input type="number" name="countofclientanother" id="countofclientanother"> р.</div>
+                </div>
+                <div class="planned-costs-another">
+                    <h2>Планируемые затраты:</h2>
+                    <label for="plannedcostsanother-inweek">1. В неделю:</label>
+                    <div class="input"> <input type="number" name="plannedcostsanother-inweek" id="plannedcostsanother-inweek"> р.</div>
+                    <label for="plannedcostsanother-inmonth">2. В месяц:</label>
+                    <div class="input"><input type="number" name="plannedcostsanother-inmonth" id="plannedcostsanother-inmonth"> р.</div>
+                </div>
+                <div class="another-result">
+                    <div class="income-without-percent-ditry-another">
+                        <h2>Планируемый доход от другого работника (без учета вычета процента):</h2>
+                        <div class="inline">
+                            <div>1. В день:</div><span id="incomewithoutpercentdirtyanother-inday"></span></div>
+                        <div class="inline">
+                            <div>2. В неделю (без выходных):</div><span id="incomewithoutpercentdirtyanother-inweek-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>3. В неделю (с выходными – 2 дня в любой день недели):</div><span id="incomewithoutpercentdirtyanother-inweek"></span></div>
+                        <div class="inline">
+                            <div>4. В месяц (30 дней без выходных):</div><span id="incomewithoutpercentdirtyanother-inmonth-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>5. В месяц (23 дня с выходными):</div><span id="incomewithoutpercentdirtyanother-inmonth"></span></div>
+                    </div>
+                    <div class="income-another">
+                        <h2>Планируемая чистая прибыль для работника:</h2>
+                        <div class="inline">
+                            <div>1. В день:</div><span id="incomewithoutpercentanother-inday"></span></div>
+                        <div class="inline">
+                            <div>2. В неделю (без выходных):</div><span id="incomewithoutpercentanother-inweek-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>3. В неделю (с выходными – 2 дня в любой день недели):</div><span id="incomewithoutpercentanother-inweek"></span></div>
+                        <div class="inline">
+                            <div>4. В месяц (30 дней без выходных):</div><span id="incomewithoutpercentanother-inmonth-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>5. В месяц (23 дня с выходными):</div><span id="incomewithoutpercentanother-inmonth"></span></div>
+                    </div>
+                    <div class="income-another-for-myself">
+                        <h2>Планируемая прибыль для себя с учетом затрат:</h2>
+                        <div class="inline">
+                            <div>1. В неделю (без выходных):</div><span id="incomewithoutpercentanothermyself-inweek-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>2. В неделю (с выходными – 2 дня в любой день недели):</div><span id="incomewithoutpercentanothermyself-inweek"></span></div>
+                        <div class="inline">
+                            <div>3. В месяц (30 дней без выходных):</div><span id="incomewithoutpercentanothermyself-inmonth-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>4. В месяц (23 дня с выходными):</div><span id="incomewithoutpercentanothermyself-inmonth"></span></div>
+                    </div>
+                </div>
+                <button id="countanother">Посчитать</button>
+            </div>
+            <div class="myself">
+                <div class="count-of-client">
+                    <h3>Для себя</h3>
+                    <label for="countofclient">Планируемый приток клиенток в день:</label>
+                    <div class="input"><input type="number" name="countofclient" id="countofclient"> р.</div>
+                </div>
+                <div class="planned-costs">
+                    <h2>Планируемые затраты:</h2>
+                    <label for="plannedcosts-inweek">1. В неделю:</label>
+                    <div class="input"><input type="number" name="plannedcosts-inweek" id="plannedcosts-inweek"> р.</div>
+                    <label for="plannedcosts-inmonth">2. В месяц:</label>
+                    <div class="input"><input type="number" name="plannedcosts-inmonth" id="plannedcosts-inmonth"> р.</div>
+                </div>
+                <div class="myself-result">
+                    <div class="income-without-percent-ditry">
+                        <h2>Планируемый доход:</h2>
+                        <div class="inline">
+                            <div>1. В день:</div><span id="incomewithoutpercentdirty-inday"></span></div>
+                        <div class="inline">
+                            <div>2. В неделю (без выходных):</div><span id="incomewithoutpercentdirty-inweek-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>3. В неделю (с выходными – 2 дня в любой день недели):</div><span id="incomewithoutpercentdirty-inweek"></span></div>
+                        <div class="inline">
+                            <div>4. В месяц (30 дней без выходных):</div><span id="incomewithoutpercentdirty-inmonth-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>5. В месяц (23 дня с выходными):</div><span id="incomewithoutpercentdirty-inmonth"></span></div>
+                    </div>
+                    <div class="income-for-myself">
+                        <h2>Планируемая прибыль для себя с учетом затрат:</h2>
+                        <div class="inline">
+                            <div>1. В неделю (без выходных):</div><span id="incomewithoutpercentmyself-inweek-withoutweekend"></span></div>
+                        <div class="inline">
+                            <div>2. В неделю (с выходными – 2 дня в любой день недели):</div><span id="incomewithoutpercentmyself-inweek"></span></div>
+                        <div>3. В месяц (30 дней без выходных):</div><span id="incomewithoutpercentmyself-inmonth-withoutweekend"></span>
+                        <div class="inline">
+                            <div>4. В месяц (23 дня с выходными):</div><span id="incomewithoutpercentmyself-inmonth"></span></div>
+                    </div>
+                </div>
+                <button id="countmyself">Посчитать</button>
+            </div>
+            <div class="planned-clean-profit-content">
+                <div class="planned-clean-profit">
+                    <h2>Планируемая чистая прибыль с учетом всего выше:</h2>
+                    <div class="inline">
+                        <div>1. В месяц (30 дней без выходных):</div><span id="plannedcleanprofi-inmonth-withoutweekend"></span></div>
+                    <div class="inline">
+                        <div>2. В месяц (23 дня с выходными):</div><span id="plannedcleanprofi-inmonth"></span></div>
+                </div>
+                <button id="countplannedcleanprofit">Посчитать работника и себя, а так же вывод чистой прибыли с учетом всего выше</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
